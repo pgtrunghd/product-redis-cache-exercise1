@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: product_cache_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports: ["127.0.0.1:5442:5432"]
+  redis:
+    image: redis:7-alpine
+    ports: ["127.0.0.1:6382:6379"]
